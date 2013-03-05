@@ -8,7 +8,7 @@
 		function loadfunc(){
 
 			var request =  get_XmlHttp();
-			request.open("POST", result2.php, true);
+			request.open("POST", "result2.php", true);
 			request.send();
 		
 			request.onreadystatechange = function() {
