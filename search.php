@@ -70,7 +70,7 @@
 		 Max:
 		<input class="FormElement" name="maxFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
 		<br />
-		Län:
+		LÃ¤n:
 		<select name="location">
 			<option value='Samtliga'>Samtliga</option>
 			<?php
