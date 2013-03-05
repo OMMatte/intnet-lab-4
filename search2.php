@@ -4,6 +4,7 @@
 <head>
 	<script src="sorttable.js" charset="utf-8"></script>
 	<title>PHP/PostgreSQL-test</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 	<script type="application/javascript">
 
 		function isNumberKey(evt)
