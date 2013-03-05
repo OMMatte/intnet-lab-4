@@ -20,7 +20,7 @@
 	
 echo "<table border='1' id='resTable' class='sortable'> 
 <tr> 
-<th style='cursor: pointer;'>Län</th> 
+<th style='cursor: pointer;'>LÃ¤n</th> 
 <th style='cursor: pointer;'>Objekttyp</th> 
 <th style='cursor: pointer;'>Adress</th> 
 <th style='cursor: pointer;'>Area</th> 
