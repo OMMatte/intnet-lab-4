@@ -51,7 +51,7 @@ $maxRooms = "rum<='" . $maxRooms . "'";
  
 $string = "SELECT * FROM bostader WHERE " . $minArea . $maxArea . $minPrice . $maxPrice . $minFee . $maxFee . $location . $object . $minRooms . $maxRooms . " ORDER BY " . $orderBy;
 
-echo $string;
+echo "hej" . $string;
 
 $result = pg_query($string);
 $numrows = pg_numrows($result);
