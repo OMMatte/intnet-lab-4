@@ -124,7 +124,7 @@
 		 Max:
 		<input class="FormElement" id="maxFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		<br />
-		Län:
+		LÃ¤n:
 		<select id="location" onchange="ajaxrequest()">
 			<option value='Samtliga'>Samtliga</option>
 			<?php

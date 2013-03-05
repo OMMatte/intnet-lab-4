@@ -6,6 +6,8 @@
 	$result = pg_exec($link, "select * from bostader");
 	$numrows = pg_numrows($result);
 
+	pg_exec("SET client_encoding = 'UTF-8'");
+
 	$minArea = $_POST['minArea'];
 	$maxArea = $_POST['maxArea'];
 	$minRooms = $_POST['minRooms'];
