@@ -43,14 +43,14 @@
 		var object = document.getElementById('object');
 		
 		// create pairs index=value with data that must be sent to server
-		var  the_data = 'minArea='+document.getElementById('minArea').innerHTML+
-						'&maxArea='+document.getElementById('maxArea').innerHTML+
+		var  the_data = 'minArea='+document.getElementById('minArea').value+
+						'&maxArea='+document.getElementById('maxArea').value+
 						'&minRooms='+rooms1.options[rooms1.selectedIndex].value+
 						'&maxRooms='+rooms2.options[rooms2.selectedIndex].value+
-						'&minPrice='+document.getElementById('minPrice').innerHTML+
-						'&maxPrice='+document.getElementById('maxPrice').innerHTML+
-						'&minFee='+document.getElementById('minFee').innerHTML+
-						'&maxFee='+document.getElementById('maxFee').innerHTML+
+						'&minPrice='+document.getElementById('minPrice').value+
+						'&maxPrice='+document.getElementById('maxPrice').value+
+						'&minFee='+document.getElementById('minFee').value+
+						'&maxFee='+document.getElementById('maxFee').value+
 						'&location='+location.options[location.selectedIndex].value+
 						'&object='+object.options[object.selectedIndex].value+
 						'&orderBy=pris'; 
