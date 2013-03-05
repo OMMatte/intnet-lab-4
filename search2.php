@@ -5,20 +5,7 @@
 	<script src="sorttable.js" charset="utf-8"></script>
 	<title>PHP/PostgreSQL-test</title>
 	<script type="application/javascript">
-		function loadfunc(){
 
-			var request =  get_XmlHttp();
-			request.open("POST", "result2.php", true);
-			request.send();
-		
-			request.onreadystatechange = function() {
-				if (request.readyState == 4) {
-					document.getElementById("txtHint").innerHTML = request.responseText;
-				}
-			}
-		};
-	
-	
 		function isNumberKey(evt)
 		{
 			var charCode = (evt.which) ? evt.which : event.keyCode
@@ -86,7 +73,7 @@
 	</script>
 	
 </head>
-<body onload="loadfunc()">
+<body onload="ajaxrequest()">
 
 	<?php
 		//phpinfo();
@@ -96,9 +83,9 @@
 	?>
 	<form>
 		Area, Min: 
-		<input class="FormElement" id="minArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="minArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		 Max:
-		<input class="FormElement" id="maxArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="maxArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		<br />
 		Antal rum, Min:
 		<select id="minRooms" onchange="ajaxrequest()">
@@ -128,14 +115,14 @@
 		</select>
 		<br />
 		Pris, Min: 
-		<input class="FormElement" id="minPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="minPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		 Max:
-		<input class="FormElement" id="maxPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="maxPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		<br />
 		Avgift, Min: 
-		<input class="FormElement" id="minFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="minFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		 Max:
-		<input class="FormElement" id="maxFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="maxFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)" onchange="ajaxrequest()"> 
 		<br />
 		Län:
 		<select id="location" onchange="ajaxrequest()">
