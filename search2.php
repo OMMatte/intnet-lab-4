@@ -68,7 +68,7 @@
 						'&object='+object.options[object.selectedIndex].value+
 						'&orderBy=pris'; 
 
-		request.open("POST", result2.php, true);			// set the request
+		request.open("POST", "result2.php", true);			// set the request
 
 		// adds  a header to tell the PHP script to recognize the data as is sent via POST
 		request.send(the_data);		// calls the send() method with datas as parameter
