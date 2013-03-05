@@ -3,7 +3,7 @@
 	$link = pg_connect("host=psql-vt2013 dbname=mathlin user=mathlin password=K5YKOU4tof");
 	$result = pg_exec($link, "select * from bostader");
 	$numrows = pg_numrows($result);
-	
+
 	$minArea = $_POST['minArea'];
 	$maxArea = $_POST['maxArea'];
 	$minRooms = $_POST['minRooms'];
