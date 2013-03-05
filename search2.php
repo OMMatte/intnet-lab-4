@@ -149,7 +149,7 @@
 		</select>
 		<br />
 		Boendetyp:
-		<select name="object" onchange="ajaxrequest()>
+		<select name="object" onchange="ajaxrequest()">
 			<option value='Samtliga'>Samtliga</option>
 			<?php
 				$objResult = pg_query("SELECT DISTINCT objekttyp FROM bostader ORDER BY objekttyp");
