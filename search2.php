@@ -58,7 +58,7 @@
 		// create pairs index=value with data that must be sent to server
 		var  the_data = 'minArea='+document.getElementById('minArea').innerHTML+
 						'&maxArea='+document.getElementById('maxArea').innerHTML+
-						'&minRooms='+rooms1.options[rooms1.selectedIndex].value;+
+						'&minRooms='+rooms1.options[rooms1.selectedIndex].value+
 						'&maxRooms='+rooms2.options[rooms2.selectedIndex].value+
 						'&minPrice='+document.getElementById('minPrice').innerHTML+
 						'&maxPrice='+document.getElementById('maxPrice').innerHTML+
