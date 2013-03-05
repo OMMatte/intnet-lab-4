@@ -4,6 +4,9 @@
 	$result = pg_exec($link, "select * from bostader");
 	$numrows = pg_numrows($result);
 
+print_r($_GET);
+print_r($_POST);
+
 	$minArea = $_POST['minArea'];
 	$maxArea = $_POST['maxArea'];
 	$minRooms = $_POST['minRooms'];
