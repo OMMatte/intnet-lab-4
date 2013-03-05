@@ -1,4 +1,4 @@
-<html lang="sv-SE">
+﻿<html lang="sv-SE">
 <head>
 <title>PHP/PostgreSQL-test</title>
 <meta charset="UTF-8" >
@@ -28,7 +28,7 @@
 	?>
 <table border="1" id="resTable" class="sortable"> 
 <tr> 
-<th style="cursor: pointer;">L?n</th> 
+<th style="cursor: pointer;">Län</th> 
 <th style="cursor: pointer;">Objekttyp</th> 
 <th style="cursor: pointer;">Adress</th> 
 <th style="cursor: pointer;">Area</th> 

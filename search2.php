@@ -43,8 +43,8 @@
 		var object = document.getElementById('object');
 		
 		// create pairs index=value with data that must be sent to server
-		var  the_data = 'minArea='+document.getElementById('minArea').innerHTML+
-						'&maxArea='+document.getElementById('maxArea').innerHTML+
+		var  the_data = 'minArea='+document.getElementById('minArea').value+
+						'&maxArea='+document.getElementById('maxArea').value+
 						'&minRooms='+rooms1.options[rooms1.selectedIndex].value+
 						'&maxRooms='+rooms2.options[rooms2.selectedIndex].value+
 						'&minPrice='+document.getElementById('minPrice').innerHTML+
