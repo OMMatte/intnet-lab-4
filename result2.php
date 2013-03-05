@@ -1,4 +1,6 @@
 <?php
+	header('Content-Type: text/html; charset=utf-8');
+
 	//phpinfo();
 	$link = pg_connect("host=psql-vt2013 dbname=mathlin user=mathlin password=K5YKOU4tof");
 	$result = pg_exec($link, "select * from bostader");
