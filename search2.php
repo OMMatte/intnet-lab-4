@@ -99,7 +99,7 @@
 		<input class="FormElement" name="maxArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
 		<br />
 		Antal rum, Min:
-		<select name="minRooms" onchange="ajaxrequest()>
+		<select name="minRooms" onchange="ajaxrequest()">
 			<?php
 				$roomResult = pg_query("SELECT DISTINCT rum FROM bostader ORDER BY rum");
 				$rows = pg_numrows($roomResult);
@@ -110,7 +110,7 @@
 			?>
 		</select>
 		 Max: 
-		 <select name="maxRooms" onchange="ajaxrequest()>
+		 <select name="maxRooms" onchange="ajaxrequest()">
 			<?php
 				$roomResult = pg_query("SELECT DISTINCT rum FROM bostader ORDER BY rum");
 				$rows = pg_numrows($roomResult);
