@@ -4,9 +4,6 @@
 	$result = pg_exec($link, "select * from bostader");
 	$numrows = pg_numrows($result);
 
-print_r($_GET);
-print_r($_POST);
-
 	$minArea = $_POST['minArea'];
 	$maxArea = $_POST['maxArea'];
 	$minRooms = $_POST['minRooms'];
@@ -53,8 +50,6 @@ $minRooms = "rum>='" . $minRooms . "' AND ";
 $maxRooms = "rum<='" . $maxRooms . "'";
  
 $string = "SELECT * FROM bostader WHERE " . $minArea . $maxArea . $minPrice . $maxPrice . $minFee . $maxFee . $location . $object . $minRooms . $maxRooms . " ORDER BY " . $orderBy;
-
-echo "hej" . $string;
 
 $result = pg_query($string);
 $numrows = pg_numrows($result);
