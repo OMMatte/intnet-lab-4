@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -47,10 +47,10 @@
 						'&maxArea='+document.getElementById('maxArea').value+
 						'&minRooms='+rooms1.options[rooms1.selectedIndex].value+
 						'&maxRooms='+rooms2.options[rooms2.selectedIndex].value+
-						'&minPrice='+document.getElementById('minPrice').innerHTML+
-						'&maxPrice='+document.getElementById('maxPrice').innerHTML+
-						'&minFee='+document.getElementById('minFee').innerHTML+
-						'&maxFee='+document.getElementById('maxFee').innerHTML+
+						'&minPrice='+document.getElementById('minPrice').value+
+						'&maxPrice='+document.getElementById('maxPrice').value+
+						'&minFee='+document.getElementById('minFee').value+
+						'&maxFee='+document.getElementById('maxFee').value+
 						'&location='+location.options[location.selectedIndex].value+
 						'&object='+object.options[object.selectedIndex].value+
 						'&orderBy=pris'; 
