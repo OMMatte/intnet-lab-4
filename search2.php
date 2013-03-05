@@ -50,20 +50,20 @@
 	// sends data to a php file, via POST, and displays the received answer
 	function ajaxrequest() {
 		var request =  get_XmlHttp();		// call the function for the XMLHttpRequest instance
-		var rooms1 = document.getElementByName('minRooms');
-		var rooms2 = document.getElementByName('maxRooms');
-		var location = document.getElementByName('location');
-		var object = document.getElementByName('object');
+		var rooms1 = document.getElementById('minRooms');
+		var rooms2 = document.getElementById('maxRooms');
+		var location = document.getElementById('location');
+		var object = document.getElementById('object');
 		
 		// create pairs index=value with data that must be sent to server
-		var  the_data = 'minArea='+document.getElementByName('minArea').innerHTML+
-						'&maxArea='+document.getElementByName('maxArea').innerHTML+
+		var  the_data = 'minArea='+document.getElementById('minArea').innerHTML+
+						'&maxArea='+document.getElementById('maxArea').innerHTML+
 						'&minRooms='+rooms1.options[rooms1.selectedIndex].value;+
 						'&maxRooms='+rooms2.options[rooms2.selectedIndex].value+
-						'&minPrice='+document.getElementByName('minPrice').innerHTML+
-						'&maxPrice='+document.getElementByName('maxPrice').innerHTML+
-						'&minFee='+document.getElementByName('minFee').innerHTML+
-						'&maxFee='+document.getElementByName('maxFee').innerHTML+
+						'&minPrice='+document.getElementById('minPrice').innerHTML+
+						'&maxPrice='+document.getElementById('maxPrice').innerHTML+
+						'&minFee='+document.getElementById('minFee').innerHTML+
+						'&maxFee='+document.getElementById('maxFee').innerHTML+
 						'&location='+location.options[location.selectedIndex].value+
 						'&object='+object.options[object.selectedIndex].value+
 						'&orderBy=pris'; 
@@ -94,12 +94,12 @@
 	?>
 	<form>
 		Area, Min: 
-		<input class="FormElement" name="minArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="minArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
 		 Max:
-		<input class="FormElement" name="maxArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="maxArea" type="text" size="3" maxlength="3" value="" onkeypress="return isNumberKey(event)"> 
 		<br />
 		Antal rum, Min:
-		<select name="minRooms" onchange="ajaxrequest()">
+		<select id="minRooms" onchange="ajaxrequest()">
 			<?php
 				$roomResult = pg_query("SELECT DISTINCT rum FROM bostader ORDER BY rum");
 				$rows = pg_numrows($roomResult);
@@ -110,7 +110,7 @@
 			?>
 		</select>
 		 Max: 
-		 <select name="maxRooms" onchange="ajaxrequest()">
+		 <select id="maxRooms" onchange="ajaxrequest()">
 			<?php
 				$roomResult = pg_query("SELECT DISTINCT rum FROM bostader ORDER BY rum");
 				$rows = pg_numrows($roomResult);
@@ -126,17 +126,17 @@
 		</select>
 		<br />
 		Pris, Min: 
-		<input class="FormElement" name="minPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="minPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)"> 
 		 Max:
-		<input class="FormElement" name="maxPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="maxPrice" type="text" size="9" maxlength="9" value="" onkeypress="return isNumberKey(event)"> 
 		<br />
 		Avgift, Min: 
-		<input class="FormElement" name="minFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="minFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
 		 Max:
-		<input class="FormElement" name="maxFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
+		<input class="FormElement" id="maxFee" type="text" size="5" maxlength="5" value="" onkeypress="return isNumberKey(event)"> 
 		<br />
 		Län:
-		<select name="location" onchange="ajaxrequest()">
+		<select id="location" onchange="ajaxrequest()">
 			<option value='Samtliga'>Samtliga</option>
 			<?php
 				$lanResult = pg_query("SELECT DISTINCT lan FROM bostader ORDER BY lan");
@@ -149,7 +149,7 @@
 		</select>
 		<br />
 		Boendetyp:
-		<select name="object" onchange="ajaxrequest()">
+		<select id="object" onchange="ajaxrequest()">
 			<option value='Samtliga'>Samtliga</option>
 			<?php
 				$objResult = pg_query("SELECT DISTINCT objekttyp FROM bostader ORDER BY objekttyp");
